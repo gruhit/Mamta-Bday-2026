@@ -129,7 +129,7 @@ p.s{margin:10px 0 22px;max-width:360px;font-size:1.05rem}
 
 <div class="page" data-p="5">
   <h2>Pick a gift 🎁</h2>
-  <p class="s">Choose wisely. (They’re all good. Obviously.)</p>
+  <p class="s">Open all three. You get every one 😄</p>
   <div class="boxes"><span class="bx">🎁</span><span class="bx">🎁</span><span class="bx">🎁</span></div>
   <div class="prize" id="prize">Tap a box…</div>
   <button class="btn" id="n4" data-go="6" style="display:none">One last thing 💌</button>
@@ -197,9 +197,9 @@ w.textContent=o<3?wishes[o-1]:'Wish made 🎉 It’s coming true, trust me!';
 if(o==3){boom(200);document.getElementById('n3').style.display='inline-block'}}});
 
 var prizes=['✨ This year, all your wishes come true. Terms and conditions: none 🤍','🍫 Ferrero Rocher voucher: one full box, redeemable next time we meet. No sharing required 😄','🏙️ Your company opens a new office in another city, and you get to go explore it. Adventure approved ✈️'];
-document.querySelectorAll('.bx').forEach(function(b,i){b.onclick=function(){b.textContent='💝';document.getElementById('prize').textContent='🎉 You unlocked: '+prizes[i];boom(100);document.getElementById('n4').style.display='inline-block'}});
+var op={};document.querySelectorAll('.bx').forEach(function(b,i){b.onclick=function(){b.textContent='🎊';b.style.animation='none';op[i]=1;var n=0;for(var j=0;j<3;j++)if(op[j])n++;document.getElementById('prize').innerHTML='<b>🎉 You unlocked:</b><br><br>'+prizes[i];boom(100);if(n==3)document.getElementById('n4').style.display='inline-block'}});
 
-var msg='Our first meeting on 23rd October was a bit awkward: I was meeting everyone for the first time and you weren’t feeling well. So let’s call it the trailer. 😄 Since then it’s been so fun talking to you. Sometimes we’re so alike, sometimes complete opposites, but never boring. Mumbai still owes you a better trip, and I hope your next birthday is on a beach in the Maldives with the perfect cold coffee. 🏝️ Have an amazing year, Mamta! 🎉🥤',ti;
+var msg='Our first meeting on 23rd October was a bit awkward: I was meeting everyone for the first time and you weren’t feeling well. So let’s call it the trailer. 😄 Since then it’s been so fun talking to you, and honestly it’s become one of the best parts of my day. Sometimes we’re so alike, sometimes complete opposites, but never boring. Mumbai still owes you a better trip, and I hope your next birthday is on a beach in the Maldives with the perfect cold coffee. 🏝️ Have an amazing year, Mamta! 🎉🥤',ti;
 function type(){var el=document.getElementById('tw'),sg=document.getElementById('sg'),i=0;el.textContent=msg;el.style.minHeight=el.offsetHeight+'px';el.textContent='';sg.style.opacity=0;clearInterval(ti);
 ti=setInterval(function(){el.textContent=msg.slice(0,++i);if(i%25==0)spark(W/2,H/2);if(i>=msg.length){clearInterval(ti);sg.style.transition='1s';sg.style.opacity=1;boom(200)}},28)}
 document.getElementById('boom').onclick=function(){boom(220)};
