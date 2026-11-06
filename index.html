@@ -137,7 +137,7 @@ p.s{margin:10px 0 22px;max-width:360px;font-size:1.05rem}
 
 <div class="page" data-p="5">
   <h2>Happy Birthday Mamta! 🎉</h2>
-  <div class="letter"><div id="tw"></div><div class="sg" id="sg">— your Mumbai friend 🎉</div></div>
+  <div class="letter"><div id="tw"></div><div class="sg" id="sg">— Gruhit 🎉</div></div>
   <div class="row"><button class="btn" id="boom">More confetti 🎊</button><button class="btn alt" data-go="0">Replay ↺</button></div>
 </div>
 
@@ -196,8 +196,8 @@ cds.forEach(function(c){c.onclick=function(){c.classList.add('off');var o=docume
 w.textContent=o<3?wishes[o-1]:'Wish made 🎉 It’s coming true, trust me!';
 if(o==3){boom(200);document.getElementById('n3').style.display='inline-block'}}});
 
-var prizes=['☕ One free black coffee, delivered with a smile (valid forever)','🍫 A box of Ferrero Rocher, because you deserve it 😄','🛍️ Personal shopping guide + bag carrier, valid next time you’re in Mumbai (traffic complaints allowed)'];
-document.querySelectorAll('.bx').forEach(function(b,i){b.onclick=function(){b.textContent='💝';document.getElementById('prize').textContent=prizes[i];boom(100);document.getElementById('n4').style.display='inline-block'}});
+var prizes=['✨ This year, all your wishes come true. Terms and conditions: none 🤍','🍫 Ferrero Rocher voucher: one full box, redeemable next time we meet. No sharing required 😄','🏙️ Your company opens a new office in another city, and you get to go explore it. Adventure approved ✈️'];
+document.querySelectorAll('.bx').forEach(function(b,i){b.onclick=function(){b.textContent='💝';document.getElementById('prize').textContent='🎉 You unlocked: '+prizes[i];boom(100);document.getElementById('n4').style.display='inline-block'}});
 
 var msg='Our first meeting on 23rd October was a bit awkward: I was meeting everyone for the first time and you weren’t feeling well. So let’s call it the trailer. 😄 Since then it’s been so fun talking to you. Sometimes we’re so alike, sometimes complete opposites, but never boring. Mumbai still owes you a better trip, and I hope your next birthday is on a beach in the Maldives with the perfect cold coffee. 🏝️ Have an amazing year, Mamta! 🎉🥤',ti;
 function type(){var el=document.getElementById('tw'),sg=document.getElementById('sg'),i=0;el.textContent=msg;el.style.minHeight=el.offsetHeight+'px';el.textContent='';sg.style.opacity=0;clearInterval(ti);
